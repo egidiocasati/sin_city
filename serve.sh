@@ -1,0 +1,19 @@
+#!/bin/bash
+# Start local server for Sin City website
+
+PORT=8000
+
+echo "⚡ SIN CITY - AC/DC TRIBUTE BAND ⚡"
+echo "Starting local server on http://localhost:$PORT"
+echo "Press Ctrl+C to stop"
+echo ""
+
+# Try Python 3 first, then Python 2
+if command -v python3 &> /dev/null; then
+    python3 -m http.server $PORT
+elif command -v python &> /dev/null; then
+    python -m SimpleHTTPServer $PORT
+else
+    echo "Error: Python not found. Please install Python."
+    exit 1
+fi
