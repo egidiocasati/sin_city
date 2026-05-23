@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sin-city.it/sitemap.xml

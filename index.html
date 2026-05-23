@@ -3,8 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sin City - AC/DC Tribute Band. L'energia pura del rock australiano.">
+    <meta name="description" content="Sin City - AC/DC Tribute Band dall'Italia. Concerti live in Lombardia e tutta Italia con i classici di Angus Young: Thunderstruck, Back in Black, Highway to Hell.">
     <title>Sin City | AC/DC Tribute Band</title>
+    <link rel="canonical" href="https://sin-city.it/">
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="images/logo.webp" type="image/webp">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sin City | AC/DC Tribute Band">
+    <meta property="og:description" content="Sin City - AC/DC Tribute Band dall'Italia. Concerti live in Lombardia e tutta Italia con i classici di Angus Young: Thunderstruck, Back in Black, Highway to Hell.">
+    <meta property="og:image" content="https://sin-city.it/images/logo.png">
+    <meta property="og:url" content="https://sin-city.it/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sin City | AC/DC Tribute Band">
+    <meta name="twitter:description" content="Sin City - AC/DC Tribute Band dall'Italia. Concerti live in Lombardia e tutta Italia con i classici di Angus Young.">
+    <meta name="twitter:image" content="https://sin-city.it/images/logo.png">
+    <!-- Structured Data: MusicGroup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Sin City",
+        "description": "AC/DC Tribute Band dall'Italia",
+        "genre": ["Hard Rock", "Rock", "Tribute"],
+        "url": "https://sin-city.it",
+        "image": "https://sin-city.it/images/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/sincityacdctributeband/",
+            "https://www.instagram.com/sin_city_tribute_band/",
+            "https://www.youtube.com/@sincityacdctributeband9604"
+        ]
+    }
+    </script>
+    <!-- Structured Data: Events -->
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Sin City Live @ Unic Bikers",
+            "startDate": "2026-05-29T21:00:00+02:00",
+            "location": {
+                "@type": "Place",
+                "name": "Unic Bikers",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Vanzago",
+                    "addressCountry": "IT"
+                }
+            },
+            "performer": {
+                "@type": "MusicGroup",
+                "name": "Sin City"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Sin City Live @ Willy's",
+            "startDate": "2026-06-06T21:00:00+02:00",
+            "location": {
+                "@type": "Place",
+                "name": "Willy's",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Cesano Boscone",
+                    "addressCountry": "IT"
+                }
+            },
+            "performer": {
+                "@type": "MusicGroup",
+                "name": "Sin City"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Sin City Live @ Kraken Pub",
+            "startDate": "2026-10-17T21:00:00+02:00",
+            "location": {
+                "@type": "Place",
+                "name": "Kraken Pub",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Alzano Lombardo",
+                    "addressCountry": "IT"
+                }
+            },
+            "performer": {
+                "@type": "MusicGroup",
+                "name": "Sin City"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Sin City Live @ Old Jesse",
+            "startDate": "2027-01-09T21:00:00+01:00",
+            "location": {
+                "@type": "Place",
+                "name": "Old Jesse",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Saronno",
+                    "addressCountry": "IT"
+                }
+            },
+            "performer": {
+                "@type": "MusicGroup",
+                "name": "Sin City"
+            }
+        }
+    ]
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -20,7 +133,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Navigazione principale">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
                 <span class="sin">SIN</span><span class="bolt">/</span><span class="city">CITY</span>
@@ -46,8 +159,12 @@
         <div class="hero-texture"></div>
         <div class="hero-content">
             <div class="logo-wrapper">
-                <img src="images/logo.png" alt="Sin City AC/DC Tribute Band" class="hero-logo">
+                <picture>
+                    <source srcset="images/logo.webp" type="image/webp">
+                    <img src="images/logo.png" alt="Sin City AC/DC Tribute Band - Logo ufficiale" class="hero-logo" width="841" height="841">
+                </picture>
             </div>
+            <h1 data-it="Sin City — AC/DC Tribute Band" data-en="Sin City — AC/DC Tribute Band">Sin City — AC/DC Tribute Band</h1>
             <div class="hero-text">
                 <p class="hero-tagline" data-it="&laquo; For Those About To Rock &raquo;" data-en="&laquo; For Those About To Rock &raquo;">&laquo; For Those About To Rock &raquo;</p>
             </div>
@@ -66,6 +183,7 @@
         </div>
     </div>
 
+    <main>
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
@@ -78,7 +196,10 @@
             <div class="about-layout">
                 <div class="about-image-block">
                     <div class="image-frame">
-                        <img src="images/live_11.jpg" alt="Sin City Live">
+                        <picture>
+                            <source srcset="images/live_11.webp" type="image/webp">
+                            <img src="images/live_11.jpg" alt="Sin City tribute band AC/DC durante un concerto live, il cantante sul palco" width="1214" height="1883" loading="lazy">
+                        </picture>
                     </div>
                 </div>
                 <div class="about-content">
@@ -106,28 +227,52 @@
 
             <div class="gallery-mosaic">
                 <div class="gallery-item gi-1">
-                    <img src="images/live_03.jpg" alt="Sin City Live">
+                    <picture>
+                        <source srcset="images/live_03.webp" type="image/webp">
+                        <img src="images/live_03.jpg" alt="La band Sin City sul palco con luci rosse e pubblico" width="1722" height="1149" loading="lazy">
+                    </picture>
                 </div>
                 <div class="gallery-item gi-2">
-                    <img src="images/live_04.jpg" alt="Sin City Live">
+                    <picture>
+                        <source srcset="images/live_04.webp" type="image/webp">
+                        <img src="images/live_04.jpg" alt="Chitarrista in stile Angus Young durante un assolo" width="2048" height="1512" loading="lazy">
+                    </picture>
                 </div>
                 <div class="gallery-item gi-3">
-                    <img src="images/live_05.jpg" alt="Sin City Live">
+                    <picture>
+                        <source srcset="images/live_05.webp" type="image/webp">
+                        <img src="images/live_05.jpg" alt="Vista frontale del palco con tutta la band Sin City" width="1367" height="1367" loading="lazy">
+                    </picture>
                 </div>
                 <div class="gallery-item gi-4">
-                    <img src="images/live_06.jpg" alt="Sin City Live">
+                    <picture>
+                        <source srcset="images/live_06.webp" type="image/webp">
+                        <img src="images/live_06.jpg" alt="Il cantante dei Sin City sotto i riflettori del palco" width="1452" height="1914" loading="lazy">
+                    </picture>
                 </div>
                 <div class="gallery-item gi-5">
-                    <img src="images/live_07.jpg" alt="Sin City Live">
+                    <picture>
+                        <source srcset="images/live_07.webp" type="image/webp">
+                        <img src="images/live_07.jpg" alt="Primo piano del chitarrista rhythm durante il concerto" width="1149" height="1652" loading="lazy">
+                    </picture>
                 </div>
                 <div class="gallery-item gi-6">
-                    <img src="images/live_08.jpg" alt="Sin City Live">
+                    <picture>
+                        <source srcset="images/live_08.webp" type="image/webp">
+                        <img src="images/live_08.jpg" alt="Batterista dei Sin City in azione con bacchette alzate" width="1149" height="1722" loading="lazy">
+                    </picture>
                 </div>
                 <div class="gallery-item gi-7">
-                    <img src="images/live_09.jpg" alt="Sin City Live">
+                    <picture>
+                        <source srcset="images/live_09.webp" type="image/webp">
+                        <img src="images/live_09.jpg" alt="Bassista e chitarrista insieme sotto le luci del concerto" width="1722" height="1149" loading="lazy">
+                    </picture>
                 </div>
                 <div class="gallery-item gi-8">
-                    <img src="images/live_10.jpg" alt="Sin City Live">
+                    <picture>
+                        <source srcset="images/live_10.webp" type="image/webp">
+                        <img src="images/live_10.jpg" alt="Panoramica del pubblico durante un concerto dei Sin City" width="1201" height="2048" loading="lazy">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -361,20 +506,24 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <img src="images/logo.png" alt="Sin City" class="footer-logo">
+            <picture>
+                <source srcset="images/logo.webp" type="image/webp">
+                <img src="images/logo.png" alt="Sin City AC/DC Tribute Band - Logo" class="footer-logo" width="841" height="841" loading="lazy">
+            </picture>
             <p class="footer-tagline">"For Those About To Rock, We Salute You"</p>
             <div class="footer-links">
-                <a href="https://www.facebook.com/sincityacdctributeband/" target="_blank" rel="noopener">FB</a>
+                <a href="https://www.facebook.com/sincityacdctributeband/" target="_blank" rel="noopener">Facebook</a>
                 <span>•</span>
-                <a href="https://www.instagram.com/sin_city_tribute_band/" target="_blank" rel="noopener">IG</a>
+                <a href="https://www.instagram.com/sin_city_tribute_band/" target="_blank" rel="noopener">Instagram</a>
                 <span>•</span>
-                <a href="https://www.youtube.com/@sincityacdctributeband9604" target="_blank" rel="noopener">YT</a>
+                <a href="https://www.youtube.com/@sincityacdctributeband9604" target="_blank" rel="noopener">YouTube</a>
             </div>
-            <p class="copyright">&copy; 2025 Sin City AC/DC Tribute Band</p>
+            <p class="copyright">&copy; 2026 Sin City AC/DC Tribute Band</p>
         </div>
     </footer>
 
