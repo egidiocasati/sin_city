@@ -36,7 +36,7 @@ body {
     background-color: var(--bronze-main);
     color: var(--text-dark);
     line-height: 1.7;
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
     /* Gradient overlay for depth */
     background-image:
@@ -56,7 +56,7 @@ img {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
@@ -83,7 +83,7 @@ img {
     border: none;
     color: var(--text-brown);
     font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
     transition: color 0.3s;
@@ -119,7 +119,7 @@ img {
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
@@ -170,7 +170,7 @@ img {
 
 .nav-links a {
     font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -264,9 +264,9 @@ img {
 /* Hero H1 */
 .hero-content h1 {
     font-family: 'Cinzel', serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     text-transform: uppercase;
     color: var(--text-brown);
     margin-bottom: 1rem;
@@ -285,7 +285,7 @@ img {
 
 .hero-tagline {
     font-family: 'Crimson Text', serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-style: italic;
     color: var(--text-brown);
     letter-spacing: 4px;
@@ -296,7 +296,7 @@ img {
     display: inline-block;
     padding: 1rem 3rem;
     font-family: 'Cinzel', serif;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -366,7 +366,7 @@ img {
 
 /* ===== SECTIONS ===== */
 .section {
-    padding: 6rem 0;
+    padding: 7rem 0;
     position: relative;
     z-index: 2;
     background: linear-gradient(180deg,
@@ -394,7 +394,7 @@ img {
 
 .section-header h2 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-size: clamp(2rem, 4.5vw, 3rem);
     font-weight: 700;
     letter-spacing: 6px;
     text-transform: uppercase;
@@ -483,7 +483,7 @@ img {
 }
 
 blockquote p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-style: italic;
     color: var(--text-brown);
     line-height: 1.8;
@@ -492,6 +492,7 @@ blockquote p {
 .about-text p {
     margin-bottom: 1.5rem;
     color: var(--text-dark);
+    font-size: 1.1rem;
 }
 
 /* ===== GALLERY SECTION ===== */
@@ -506,8 +507,8 @@ blockquote p {
 .gallery-mosaic {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    gap: 0.8rem;
+    grid-template-rows: repeat(3, 240px);
+    gap: 1rem;
 }
 
 .gallery-item {
@@ -570,7 +571,7 @@ blockquote p {
 
 .ticker-track span {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     letter-spacing: 3px;
     color: var(--cream);
     padding-right: 0;
@@ -616,7 +617,7 @@ blockquote p {
 .video-link-btn {
     display: inline-block;
     font-family: 'Cinzel', serif;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     letter-spacing: 2px;
     color: var(--text-dark);
     border-bottom: 1px solid var(--bronze-darker);
@@ -638,8 +639,8 @@ blockquote p {
 .show-item {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    padding: 1.5rem 0;
+    gap: 2.5rem;
+    padding: 2rem 0;
     border-bottom: 1px solid var(--bronze-darker);
     transition: all 0.3s ease;
 }
@@ -650,9 +651,9 @@ blockquote p {
 }
 
 .show-date {
-    min-width: 70px;
+    min-width: 80px;
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.8rem;
     background: var(--bronze-darker);
     border: 1px solid var(--text-brown);
 }
@@ -668,7 +669,7 @@ blockquote p {
 
 .show-date .month {
     font-family: 'Cinzel', serif;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 2px;
     color: var(--bronze-lighter);
 }
@@ -681,7 +682,7 @@ blockquote p {
 
 .show-details h3 {
     font-family: 'Cinzel', serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 2px;
     color: var(--text-dark);
@@ -701,7 +702,7 @@ blockquote p {
 
 .show-details .location {
     color: var(--text-brown);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .show-details .time {
@@ -713,14 +714,14 @@ blockquote p {
 .countdown-wrapper {
     text-align: center;
     margin-bottom: 3rem;
-    padding: 2rem;
+    padding: 2.5rem;
     background: var(--bronze-darker);
     border: 1px solid var(--text-brown);
 }
 
 .countdown-label {
     font-family: 'Cinzel', serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--cream);
@@ -749,7 +750,7 @@ blockquote p {
 
 .cd-label {
     font-family: 'Cinzel', serif;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--bronze-lighter);
@@ -765,7 +766,7 @@ blockquote p {
     margin-top: 3rem;
     font-style: italic;
     color: var(--text-brown);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 /* ===== TECHNICAL RIDER ===== */
@@ -893,13 +894,13 @@ blockquote p {
 .rider-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .rider-card {
     background: var(--bronze-darker);
     border: 1px solid var(--text-brown);
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 2rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -910,13 +911,13 @@ blockquote p {
 }
 
 .rider-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .rider-card h3 {
     font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--cream);
@@ -930,8 +931,8 @@ blockquote p {
 
 .rider-card ul li {
     color: var(--bronze-lighter);
-    font-size: 0.95rem;
-    padding: 0.3rem 0;
+    font-size: 1.05rem;
+    padding: 0.4rem 0;
     padding-left: 1rem;
     position: relative;
 }
@@ -947,7 +948,7 @@ blockquote p {
     text-align: center;
     margin-top: 2.5rem;
     font-style: italic;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-medium);
     max-width: 700px;
     margin-left: auto;
@@ -1044,7 +1045,7 @@ blockquote p {
 
 .contact-info h3 {
     font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     letter-spacing: 3px;
     color: var(--text-dark);
     margin-bottom: 1rem;
@@ -1067,7 +1068,7 @@ blockquote p {
     align-items: center;
     gap: 1rem;
     color: var(--text-dark);
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     transition: color 0.3s;
 }
 
@@ -1087,9 +1088,9 @@ blockquote p {
 }
 
 .social-btn {
-    padding: 0.8rem 1.5rem;
+    padding: 0.9rem 1.8rem;
     font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     letter-spacing: 2px;
     border: 2px solid var(--bronze-darker);
     color: var(--text-dark);
@@ -1111,9 +1112,9 @@ blockquote p {
 .form-row input,
 .form-row textarea {
     width: 100%;
-    padding: 1rem 1.2rem;
+    padding: 1.1rem 1.3rem;
     font-family: 'Crimson Text', serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--text-dark);
     background: var(--bronze-lighter);
     border: 2px solid var(--bronze-darker);
@@ -1139,9 +1140,9 @@ blockquote p {
 
 .submit-btn {
     align-self: flex-start;
-    padding: 1rem 2.5rem;
+    padding: 1.1rem 2.8rem;
     font-family: 'Cinzel', serif;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -1200,7 +1201,7 @@ blockquote p {
 
 .footer-tagline {
     font-family: 'Crimson Text', serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-style: italic;
     color: var(--bronze-lighter);
     margin-bottom: 1.5rem;
@@ -1216,7 +1217,7 @@ blockquote p {
 
 .footer-links a {
     font-family: 'Cinzel', serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 2px;
     color: var(--bronze-light);
     transition: color 0.3s;
@@ -1231,7 +1232,7 @@ blockquote p {
 }
 
 .copyright {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--bronze-dark);
     letter-spacing: 1px;
 }
