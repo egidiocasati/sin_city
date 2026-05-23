@@ -777,6 +777,119 @@ blockquote p {
     ) !important;
 }
 
+/* Stage Plot */
+.stage-plot {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    background: var(--bronze-darker);
+    border: 2px solid var(--text-brown);
+    padding: 1.5rem 1.5rem 1rem;
+    position: relative;
+}
+
+.stage-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bronze-lighter);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.stage-back {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.stage-pos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem 0.4rem;
+    border: 1px solid var(--bronze-dark);
+    background: rgba(139, 90, 43, 0.25);
+}
+
+.stage-amp {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--cream);
+    margin-bottom: 0.3rem;
+}
+
+.stage-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.stage-role {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: var(--bronze-lighter);
+    text-transform: uppercase;
+}
+
+.stage-note {
+    font-family: 'Crimson Text', serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--bronze-light);
+    margin-top: 0.2rem;
+}
+
+.stage-divider {
+    border-top: 2px dashed var(--bronze-dark);
+    margin: 0.5rem 0;
+}
+
+.stage-front {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0 0.5rem;
+}
+
+.stage-front-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stage-icon-sm {
+    font-size: 1.2rem;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+}
+
+.stage-front-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: var(--bronze-lighter);
+    text-transform: uppercase;
+}
+
+.stage-audience {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--bronze-lighter);
+    margin-bottom: 3rem;
+    padding-top: 0.5rem;
+}
+
 .rider-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1078,6 +1191,14 @@ blockquote p {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .stage-back {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stage-front {
+        gap: 1.2rem;
+    }
+
     .contact-layout {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1174,6 +1295,32 @@ blockquote p {
 
     .rider-grid {
         grid-template-columns: 1fr;
+    }
+
+    .stage-plot {
+        padding: 1rem;
+    }
+
+    .stage-back {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .stage-front {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .stage-amp {
+        font-size: 0.6rem;
+    }
+
+    .stage-icon {
+        font-size: 1.2rem;
+    }
+
+    .stage-role {
+        font-size: 0.6rem;
     }
 
     .countdown-boxes {
