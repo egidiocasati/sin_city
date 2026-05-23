@@ -313,6 +313,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ===== GALLERY LIGHTBOX =====
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    let currentIndex = 0;
+
+    // Build array of full-size image sources
+    const gallerySrcs = [];
+    galleryItems.forEach(item => {
+        const img = item.querySelector('img');
+        if (img) gallerySrcs.push({ src: img.src, alt: img.alt });
+    });
+
+    function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = gallerySrcs[index].src;
+        lightboxImg.alt = gallerySrcs[index].alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + gallerySrcs.length) % gallerySrcs.length;
+        lightboxImg.src = gallerySrcs[currentIndex].src;
+        lightboxImg.alt = gallerySrcs[currentIndex].alt;
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % gallerySrcs.length;
+        lightboxImg.src = gallerySrcs[currentIndex].src;
+        lightboxImg.alt = gallerySrcs[currentIndex].alt;
+    }
+
+    galleryItems.forEach((item, i) => {
+        item.addEventListener('click', () => openLightbox(i));
+    });
+
+    if (lightbox) {
+        lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+        lightbox.querySelector('.lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+        lightbox.querySelector('.lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+    });
+
     // ===== CONSOLE BRANDING =====
     console.log('%c SIN CITY ',
         'background: linear-gradient(90deg, #CD7F32, #CFB53B); color: #0D0D0D; font-size: 24px; font-weight: bold; padding: 10px 20px;'
