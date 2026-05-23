@@ -402,6 +402,30 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowRight') showNext();
     });
 
+    // ===== COOKIE BANNER =====
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookiePolicyLink = document.getElementById('cookie-policy-link');
+
+    if (cookieBanner && !localStorage.getItem('sincity-cookies-accepted')) {
+        cookieBanner.classList.add('visible');
+    }
+
+    if (cookieAccept) {
+        cookieAccept.addEventListener('click', () => {
+            localStorage.setItem('sincity-cookies-accepted', '1');
+            cookieBanner.classList.remove('visible');
+        });
+    }
+
+    if (cookiePolicyLink) {
+        cookiePolicyLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('sincity-cookies-accepted');
+            cookieBanner.classList.add('visible');
+        });
+    }
+
     // ===== CONSOLE BRANDING =====
     console.log('%c SIN CITY ',
         'background: linear-gradient(90deg, #CD7F32, #CFB53B); color: #0D0D0D; font-size: 24px; font-weight: bold; padding: 10px 20px;'
