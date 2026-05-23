@@ -165,7 +165,7 @@ img {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .nav-links a {
@@ -536,62 +536,86 @@ blockquote p {
 .gi-7 { grid-column: 3 / 4; grid-row: 3 / 4; }
 .gi-8 { grid-column: 4 / 5; grid-row: 3 / 4; }
 
+/* ===== SONG TICKER ===== */
+.song-ticker {
+    overflow: hidden;
+    background: var(--bronze-darker);
+    padding: 0.8rem 0;
+    position: relative;
+    z-index: 2;
+    border-top: 2px solid var(--text-dark);
+    border-bottom: 2px solid var(--text-dark);
+}
+
+.ticker-track {
+    display: flex;
+    white-space: nowrap;
+    animation: tickerScroll 40s linear infinite;
+}
+
+.song-ticker:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+.ticker-track span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    color: var(--cream);
+    padding-right: 0;
+}
+
+@keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 /* ===== VIDEO SECTION ===== */
 .video-section {
     padding: 5rem 0;
 }
 
-.video-showcase {
-    max-width: 600px;
+.video-embed-container {
+    max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 
-.video-link {
-    display: block;
-    padding: 4rem 2rem;
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
     border: 3px solid var(--bronze-darker);
     background: var(--bronze-dark);
-    transition: all 0.4s ease;
 }
 
-.video-link:hover {
-    background: var(--bronze-darker);
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.play-circle {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    border: 3px solid var(--cream);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
+.video-channel-link {
+    text-align: center;
+    margin-top: 1.5rem;
 }
 
-.play-circle span {
-    font-size: 2rem;
-    color: var(--cream);
-    margin-left: 5px;
-}
-
-.video-link:hover .play-circle {
-    background: var(--cream);
-    transform: scale(1.1);
-}
-
-.video-link:hover .play-circle span {
-    color: var(--text-dark);
-}
-
-.video-link p {
+.video-link-btn {
+    display: inline-block;
     font-family: 'Cinzel', serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     letter-spacing: 2px;
-    color: var(--cream);
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--bronze-darker);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.video-link-btn:hover {
+    color: var(--text-brown);
+    border-bottom-color: var(--text-brown);
 }
 
 /* ===== SHOWS SECTION ===== */
@@ -674,12 +698,136 @@ blockquote p {
     font-size: 0.9rem;
 }
 
+/* ===== COUNTDOWN ===== */
+.countdown-wrapper {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--bronze-darker);
+    border: 1px solid var(--text-brown);
+}
+
+.countdown-label {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 1rem;
+}
+
+.countdown-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.countdown-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.cd-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--cream);
+}
+
+.cd-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bronze-lighter);
+    margin-top: 0.3rem;
+}
+
+.countdown-wrapper.hidden {
+    display: none;
+}
+
 .shows-cta {
     text-align: center;
     margin-top: 3rem;
     font-style: italic;
     color: var(--text-brown);
     font-size: 1.1rem;
+}
+
+/* ===== TECHNICAL RIDER ===== */
+.rider-section {
+    background: linear-gradient(180deg,
+        var(--bronze-main) 0%,
+        var(--bronze-dark) 50%,
+        var(--bronze-main) 100%
+    ) !important;
+}
+
+.rider-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.rider-card {
+    background: var(--bronze-darker);
+    border: 1px solid var(--text-brown);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rider-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.rider-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.rider-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 1rem;
+}
+
+.rider-card ul {
+    list-style: none;
+    text-align: left;
+}
+
+.rider-card ul li {
+    color: var(--bronze-lighter);
+    font-size: 0.95rem;
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.rider-card ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--bronze-light);
+}
+
+.rider-note {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -915,6 +1063,10 @@ blockquote p {
     .gi-6 { grid-column: 1 / 3; grid-row: 4 / 5; }
     .gi-7, .gi-8 { display: none; }
 
+    .rider-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .contact-layout {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1007,6 +1159,22 @@ blockquote p {
 
     .show-line {
         display: none;
+    }
+
+    .rider-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown-boxes {
+        gap: 1rem;
+    }
+
+    .cd-number {
+        font-size: 2.2rem;
+    }
+
+    .ticker-track span {
+        font-size: 1.1rem;
     }
 }
 

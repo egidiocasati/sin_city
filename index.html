@@ -30,6 +30,7 @@
                 <li><a href="#about" data-it="La Band" data-en="The Band">La Band</a></li>
                 <li><a href="#gallery" data-it="Galleria" data-en="Gallery">Galleria</a></li>
                 <li><a href="#shows" data-it="Concerti" data-en="Shows">Concerti</a></li>
+                <li><a href="#rider" data-it="Tech Rider" data-en="Tech Rider">Tech Rider</a></li>
                 <li><a href="#contact" data-it="Contatti" data-en="Contact">Contatti</a></li>
             </ul>
             <div class="burger">
@@ -56,6 +57,14 @@
             <div class="scroll-icon"></div>
         </div>
     </section>
+
+    <!-- Song Ticker -->
+    <div class="song-ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span>THUNDERSTRUCK ⚡ BACK IN BLACK ⚡ HIGHWAY TO HELL ⚡ T.N.T. ⚡ HELLS BELLS ⚡ YOU SHOOK ME ALL NIGHT LONG ⚡ FOR THOSE ABOUT TO ROCK ⚡ SHOOT TO THRILL ⚡ WHOLE LOTTA ROSIE ⚡ SIN CITY ⚡ DIRTY DEEDS DONE DIRT CHEAP ⚡ IT'S A LONG WAY TO THE TOP ⚡ </span>
+            <span>THUNDERSTRUCK ⚡ BACK IN BLACK ⚡ HIGHWAY TO HELL ⚡ T.N.T. ⚡ HELLS BELLS ⚡ YOU SHOOK ME ALL NIGHT LONG ⚡ FOR THOSE ABOUT TO ROCK ⚡ SHOOT TO THRILL ⚡ WHOLE LOTTA ROSIE ⚡ SIN CITY ⚡ DIRTY DEEDS DONE DIRT CHEAP ⚡ IT'S A LONG WAY TO THE TOP ⚡ </span>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="section">
@@ -133,13 +142,13 @@
                 <div class="ornament-right"></div>
             </div>
 
-            <div class="video-showcase">
-                <a href="https://www.youtube.com/@sincityacdctributeband9604" target="_blank" rel="noopener" class="video-link">
-                    <div class="play-circle">
-                        <span>&#9654;</span>
-                    </div>
-                    <p data-it="Guarda i nostri video su YouTube" data-en="Watch our videos on YouTube">Guarda i nostri video su YouTube</p>
-                </a>
+            <div class="video-embed-container">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube-nocookie.com/embed/G-7lktj3M8Q" title="Sin City AC/DC Tribute Band" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="video-channel-link">
+                <a href="https://www.youtube.com/@sincityacdctributeband9604" target="_blank" rel="noopener" class="video-link-btn" data-it="Tutti i video sul nostro canale YouTube" data-en="All videos on our YouTube channel">Tutti i video sul nostro canale YouTube</a>
             </div>
         </div>
     </section>
@@ -151,6 +160,28 @@
                 <div class="ornament-left"></div>
                 <h2 data-it="Prossimi Concerti" data-en="Upcoming Shows">Prossimi Concerti</h2>
                 <div class="ornament-right"></div>
+            </div>
+
+            <div id="countdown" class="countdown-wrapper">
+                <p class="countdown-label" data-it="Prossimo concerto tra" data-en="Next show in">Prossimo concerto tra</p>
+                <div class="countdown-boxes">
+                    <div class="countdown-box">
+                        <span id="cd-days" class="cd-number">00</span>
+                        <span class="cd-label" data-it="Giorni" data-en="Days">Giorni</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="cd-hours" class="cd-number">00</span>
+                        <span class="cd-label" data-it="Ore" data-en="Hours">Ore</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="cd-minutes" class="cd-number">00</span>
+                        <span class="cd-label" data-it="Minuti" data-en="Minutes">Minuti</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="cd-seconds" class="cd-number">00</span>
+                        <span class="cd-label" data-it="Secondi" data-en="Seconds">Secondi</span>
+                    </div>
+                </div>
             </div>
 
             <div class="shows-timeline">
@@ -204,6 +235,81 @@
             </div>
 
             <p class="shows-cta" data-it="Per booking e date private contattaci" data-en="Contact us for booking and private events">Per booking e date private contattaci</p>
+        </div>
+    </section>
+
+    <!-- Technical Rider Section -->
+    <section id="rider" class="section rider-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="ornament-left"></div>
+                <h2>Technical Rider</h2>
+                <div class="ornament-right"></div>
+            </div>
+
+            <div class="rider-grid">
+                <div class="rider-card">
+                    <div class="rider-icon">&#127911;</div>
+                    <h3 data-it="Impianto PA" data-en="PA System">Impianto PA</h3>
+                    <ul>
+                        <li data-it="2000W RMS minimo" data-en="2000W RMS minimum">2000W RMS minimo</li>
+                        <li data-it="Sub 2x18&quot;" data-en="Sub 2x18&quot;">Sub 2x18"</li>
+                        <li data-it="Mixer 16 canali" data-en="16 channel mixer">Mixer 16 canali</li>
+                        <li data-it="Tecnico del suono dedicato" data-en="Dedicated sound engineer">Tecnico del suono dedicato</li>
+                    </ul>
+                </div>
+
+                <div class="rider-card">
+                    <div class="rider-icon">&#127926;</div>
+                    <h3 data-it="Palco" data-en="Stage">Palco</h3>
+                    <ul>
+                        <li data-it="6m x 4m minimo" data-en="6m x 4m minimum">6m x 4m minimo</li>
+                        <li data-it="Altezza 60cm da terra" data-en="60cm height from ground">Altezza 60cm da terra</li>
+                        <li data-it="Copertura in caso di pioggia" data-en="Rain cover required">Copertura in caso di pioggia</li>
+                    </ul>
+                </div>
+
+                <div class="rider-card">
+                    <div class="rider-icon">&#127908;</div>
+                    <h3>Monitor</h3>
+                    <ul>
+                        <li data-it="4 mix indipendenti" data-en="4 independent mixes">4 mix indipendenti</li>
+                        <li data-it="4 wedge 12&quot; 300W" data-en="4 wedge 12&quot; 300W">4 wedge 12" 300W</li>
+                    </ul>
+                </div>
+
+                <div class="rider-card">
+                    <div class="rider-icon">&#128161;</div>
+                    <h3 data-it="Luci" data-en="Lights">Luci</h3>
+                    <ul>
+                        <li data-it="8 PAR LED RGBW" data-en="8 PAR LED RGBW">8 PAR LED RGBW</li>
+                        <li data-it="2 teste mobili" data-en="2 moving heads">2 teste mobili</li>
+                        <li data-it="Macchina del fumo" data-en="Fog machine">Macchina del fumo</li>
+                    </ul>
+                </div>
+
+                <div class="rider-card">
+                    <div class="rider-icon">&#127928;</div>
+                    <h3>Backline</h3>
+                    <ul>
+                        <li data-it="Batteria completa (acustica)" data-en="Full drum kit (acoustic)">Batteria completa (acustica)</li>
+                        <li data-it="Amplificatore basso 300W+" data-en="Bass amplifier 300W+">Amplificatore basso 300W+</li>
+                        <li data-it="Chitarre: strumentazione propria" data-en="Guitars: own equipment">Chitarre: strumentazione propria</li>
+                    </ul>
+                </div>
+
+                <div class="rider-card">
+                    <div class="rider-icon">&#9889;</div>
+                    <h3 data-it="Alimentazione" data-en="Power Supply">Alimentazione</h3>
+                    <ul>
+                        <li data-it="16A / 230V dedicata" data-en="16A / 230V dedicated">16A / 230V dedicata</li>
+                        <li data-it="Minimo 4 prese Schuko" data-en="Minimum 4 Schuko outlets">Minimo 4 prese Schuko</li>
+                        <li data-it="Messa a terra verificata" data-en="Verified ground connection">Messa a terra verificata</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="rider-note" data-it="La band si riserva il diritto di annullare l'esibizione qualora le condizioni tecniche non rispettino i requisiti minimi indicati." data-en="The band reserves the right to cancel the performance if technical conditions do not meet the minimum requirements listed above.">La band si riserva il diritto di annullare l'esibizione qualora le condizioni tecniche non rispettino i requisiti minimi indicati.</p>
         </div>
     </section>
 

@@ -115,6 +115,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ===== COUNTDOWN TIMER =====
+    const showDates = [
+        new Date('2026-05-29T21:00:00+02:00'),
+        new Date('2026-06-06T21:00:00+02:00'),
+        new Date('2026-10-17T21:00:00+02:00'),
+        new Date('2027-01-09T21:00:00+01:00')
+    ];
+
+    const countdownEl = document.getElementById('countdown');
+
+    function getNextShow() {
+        const now = new Date();
+        for (const date of showDates) {
+            if (date > now) return date;
+        }
+        return null;
+    }
+
+    function updateCountdown() {
+        const nextShow = getNextShow();
+        if (!nextShow) {
+            if (countdownEl) countdownEl.classList.add('hidden');
+            return;
+        }
+
+        const now = new Date();
+        const diff = nextShow - now;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+        document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('cd-minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('cd-seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    if (countdownEl) {
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    }
+
     // ===== SCROLL ANIMATIONS =====
     const observerOptions = {
         root: null,
@@ -134,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add fade-in effect to elements
     const fadeElements = document.querySelectorAll(
-        '.about-layout, .gallery-item, .show-item, .contact-info, .contact-form, .video-showcase'
+        '.about-layout, .gallery-item, .show-item, .contact-info, .contact-form, .video-embed-container, .rider-card, .countdown-wrapper'
     );
 
     fadeElements.forEach((el, index) => {
