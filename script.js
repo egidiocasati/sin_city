@@ -29,6 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-placeholder-it][data-placeholder-en]').forEach(el => {
             el.placeholder = el.dataset[`placeholder${lang.charAt(0).toUpperCase() + lang.slice(1)}`];
         });
+
+        // Update cookie modal language
+        const cmIt = document.getElementById('cookie-modal-it');
+        const cmEn = document.getElementById('cookie-modal-en');
+        if (cmIt && cmEn) {
+            cmIt.style.display = lang === 'it' ? 'block' : 'none';
+            cmEn.style.display = lang === 'en' ? 'block' : 'none';
+        }
     }
 
     // Initialize language
@@ -402,27 +410,57 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowRight') showNext();
     });
 
-    // ===== COOKIE BANNER =====
+    // ===== COOKIE BANNER & MODAL =====
     const cookieBanner = document.getElementById('cookie-banner');
     const cookieAccept = document.getElementById('cookie-accept');
+    const cookieMore = document.getElementById('cookie-more');
+    const cookieModal = document.getElementById('cookie-modal');
+    const cookieModalClose = document.getElementById('cookie-modal-close');
+    const cookieModalOverlay = document.getElementById('cookie-modal-overlay');
+    const cookieModalAccept = document.getElementById('cookie-modal-accept');
     const cookiePolicyLink = document.getElementById('cookie-policy-link');
+    const cookieModalIt = document.getElementById('cookie-modal-it');
+    const cookieModalEn = document.getElementById('cookie-modal-en');
+
+    function updateCookieModalLang() {
+        if (cookieModalIt && cookieModalEn) {
+            cookieModalIt.style.display = currentLang === 'it' ? 'block' : 'none';
+            cookieModalEn.style.display = currentLang === 'en' ? 'block' : 'none';
+        }
+    }
+
+    function acceptCookies() {
+        localStorage.setItem('sincity-cookies-accepted', '1');
+        cookieBanner.classList.remove('visible');
+        cookieModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function openCookieModal() {
+        updateCookieModalLang();
+        cookieModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCookieModal() {
+        cookieModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 
     if (cookieBanner && !localStorage.getItem('sincity-cookies-accepted')) {
         cookieBanner.classList.add('visible');
     }
 
-    if (cookieAccept) {
-        cookieAccept.addEventListener('click', () => {
-            localStorage.setItem('sincity-cookies-accepted', '1');
-            cookieBanner.classList.remove('visible');
-        });
-    }
+    if (cookieAccept) cookieAccept.addEventListener('click', acceptCookies);
+    if (cookieModalAccept) cookieModalAccept.addEventListener('click', acceptCookies);
+    if (cookieMore) cookieMore.addEventListener('click', openCookieModal);
+    if (cookieModalClose) cookieModalClose.addEventListener('click', closeCookieModal);
+    if (cookieModalOverlay) cookieModalOverlay.addEventListener('click', closeCookieModal);
 
     if (cookiePolicyLink) {
         cookiePolicyLink.addEventListener('click', (e) => {
             e.preventDefault();
-            localStorage.removeItem('sincity-cookies-accepted');
-            cookieBanner.classList.add('visible');
+            openCookieModal();
         });
     }
 

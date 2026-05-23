@@ -586,8 +586,98 @@
     <!-- Cookie Banner -->
     <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-content">
-            <p data-it="Questo sito utilizza cookie tecnici e di terze parti (YouTube) per migliorare l'esperienza di navigazione." data-en="This site uses technical and third-party cookies (YouTube) to improve your browsing experience.">Questo sito utilizza cookie tecnici e di terze parti (YouTube) per migliorare l'esperienza di navigazione.</p>
-            <button class="cookie-accept" id="cookie-accept" data-it="Accetta" data-en="Accept">Accetta</button>
+            <p data-it="Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza di navigazione." data-en="This site uses technical and third-party cookies to improve your browsing experience.">Questo sito utilizza cookie tecnici e di terze parti per migliorare l'esperienza di navigazione.</p>
+            <div class="cookie-actions">
+                <button class="cookie-more" id="cookie-more" data-it="Leggi di pi&ugrave;" data-en="Read more">Leggi di pi&ugrave;</button>
+                <button class="cookie-accept" id="cookie-accept" data-it="Accetta" data-en="Accept">Accetta</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Policy Modal -->
+    <div class="cookie-modal" id="cookie-modal">
+        <div class="cookie-modal-overlay" id="cookie-modal-overlay"></div>
+        <div class="cookie-modal-box">
+            <button class="cookie-modal-close" id="cookie-modal-close">&times;</button>
+            <h3>Cookie Policy</h3>
+            <div class="cookie-modal-body">
+                <div class="cookie-modal-lang" id="cookie-modal-it">
+                    <p>Il sito <strong>sin-city.it</strong> utilizza cookie per garantire il corretto funzionamento delle pagine e migliorare l'esperienza dell'utente.</p>
+
+                    <h4>1. Cookie tecnici (necessari)</h4>
+                    <p>Questi cookie sono indispensabili per il funzionamento del sito. Non raccolgono dati personali e non richiedono consenso.</p>
+                    <table class="cookie-table">
+                        <thead><tr><th>Cookie</th><th>Finalit&agrave;</th><th>Durata</th></tr></thead>
+                        <tbody>
+                            <tr><td>sincity-cookies-accepted</td><td>Salva la preferenza cookie</td><td>Permanente</td></tr>
+                            <tr><td>sincity-lang</td><td>Salva la lingua scelta (IT/EN)</td><td>Permanente</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>2. Cookie di terze parti</h4>
+                    <p>Il sito integra contenuti di terze parti che possono impostare propri cookie:</p>
+                    <table class="cookie-table">
+                        <thead><tr><th>Servizio</th><th>Finalit&agrave;</th><th>Policy</th></tr></thead>
+                        <tbody>
+                            <tr><td>YouTube (no-cookie)</td><td>Riproduzione video embed</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td></tr>
+                            <tr><td>Google Fonts</td><td>Caricamento font</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td></tr>
+                            <tr><td>Formspree</td><td>Invio form contatti</td><td><a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Privacy</a></td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>3. I tuoi diritti</h4>
+                    <p>Ai sensi del Regolamento UE 2016/679 (GDPR), puoi in qualsiasi momento:</p>
+                    <ul>
+                        <li>Revocare il consenso cliccando su "Cookie Policy" nel footer</li>
+                        <li>Cancellare i cookie dalle impostazioni del tuo browser</li>
+                        <li>Richiedere informazioni scrivendo a <a href="mailto:info@sincityband.it">info@sincityband.it</a></li>
+                    </ul>
+
+                    <h4>4. Titolare del trattamento</h4>
+                    <p>Sin City AC/DC Tribute Band &mdash; info@sincityband.it</p>
+
+                    <p class="cookie-updated">Ultimo aggiornamento: maggio 2026</p>
+                </div>
+
+                <div class="cookie-modal-lang" id="cookie-modal-en" style="display:none;">
+                    <p>The website <strong>sin-city.it</strong> uses cookies to ensure proper functioning and improve the user experience.</p>
+
+                    <h4>1. Technical cookies (necessary)</h4>
+                    <p>These cookies are essential for the website to function. They do not collect personal data and do not require consent.</p>
+                    <table class="cookie-table">
+                        <thead><tr><th>Cookie</th><th>Purpose</th><th>Duration</th></tr></thead>
+                        <tbody>
+                            <tr><td>sincity-cookies-accepted</td><td>Saves cookie preference</td><td>Permanent</td></tr>
+                            <tr><td>sincity-lang</td><td>Saves language choice (IT/EN)</td><td>Permanent</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>2. Third-party cookies</h4>
+                    <p>The site integrates third-party content that may set their own cookies:</p>
+                    <table class="cookie-table">
+                        <thead><tr><th>Service</th><th>Purpose</th><th>Policy</th></tr></thead>
+                        <tbody>
+                            <tr><td>YouTube (no-cookie)</td><td>Embedded video playback</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td></tr>
+                            <tr><td>Google Fonts</td><td>Font loading</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td></tr>
+                            <tr><td>Formspree</td><td>Contact form submission</td><td><a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Privacy</a></td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>3. Your rights</h4>
+                    <p>Under EU Regulation 2016/679 (GDPR), you can at any time:</p>
+                    <ul>
+                        <li>Revoke consent by clicking "Cookie Policy" in the footer</li>
+                        <li>Delete cookies from your browser settings</li>
+                        <li>Request information by writing to <a href="mailto:info@sincityband.it">info@sincityband.it</a></li>
+                    </ul>
+
+                    <h4>4. Data controller</h4>
+                    <p>Sin City AC/DC Tribute Band &mdash; info@sincityband.it</p>
+
+                    <p class="cookie-updated">Last updated: May 2026</p>
+                </div>
+            </div>
+            <button class="cookie-accept cookie-modal-accept" id="cookie-modal-accept" data-it="Accetta e chiudi" data-en="Accept and close">Accetta e chiudi</button>
         </div>
     </div>
 
