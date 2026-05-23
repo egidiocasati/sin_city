@@ -215,9 +215,11 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryObserver.observe(galleryMosaic);
     }
 
-    // ===== CONTACT FORM =====
+    // ===== CONTACT FORM (Formspree) =====
+    const FORMSPREE_URL = 'https://formspree.io/f/xojbldrz';
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
+    const submitBtn = contactForm ? contactForm.querySelector('.submit-btn') : null;
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -249,14 +251,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Success (simulate)
-            showMessage(
-                currentLang === 'it'
-                    ? 'Messaggio inviato! Ti risponderemo presto.'
-                    : 'Message sent! We\'ll get back to you soon.',
-                'success'
-            );
-            contactForm.reset();
+            // Disable button while sending
+            submitBtn.disabled = true;
+            submitBtn.textContent = currentLang === 'it' ? 'Invio...' : 'Sending...';
+
+            try {
+                const response = await fetch(FORMSPREE_URL, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    showMessage(
+                        currentLang === 'it'
+                            ? 'Messaggio inviato! Ti risponderemo presto.'
+                            : 'Message sent! We\'ll get back to you soon.',
+                        'success'
+                    );
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    const errorMsg = data.errors
+                        ? data.errors.map(err => err.message).join(', ')
+                        : (currentLang === 'it' ? 'Errore nell\'invio. Riprova.' : 'Sending failed. Please try again.');
+                    showMessage(errorMsg, 'error');
+                }
+            } catch (err) {
+                showMessage(
+                    currentLang === 'it'
+                        ? 'Errore di connessione. Riprova piu\' tardi.'
+                        : 'Connection error. Please try again later.',
+                    'error'
+                );
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = currentLang === 'it' ? 'Invia' : 'Send';
+            }
         });
     }
 
