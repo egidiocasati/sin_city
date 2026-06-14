@@ -125,8 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== COUNTDOWN TIMER =====
     const showDates = [
-        new Date('2026-05-29T21:00:00+02:00'),
-        new Date('2026-06-06T21:00:00+02:00'),
+        new Date('2026-06-27T21:00:00+02:00'),
+        new Date('2026-09-13T21:00:00+02:00'),
         new Date('2026-10-17T21:00:00+02:00'),
         new Date('2027-01-09T21:00:00+01:00')
     ];
