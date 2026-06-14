@@ -631,6 +631,51 @@ blockquote p {
 }
 
 /* ===== SHOWS SECTION ===== */
+.promo-event {
+    max-width: 480px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.promo-event picture {
+    display: block;
+    border: 3px solid var(--bronze-darker);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.promo-event picture:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.promo-event img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.promo-event picture:hover img {
+    transform: scale(1.02);
+}
+
+.promo-event-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--bronze-darker);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.promo-event-link:hover {
+    color: var(--text-brown);
+    border-bottom-color: var(--text-brown);
+}
+
 .shows-timeline {
     max-width: 800px;
     margin: 0 auto;
